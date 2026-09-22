@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model daily_prod {
+  iddaily   BigInt   @id @default(autoincrement())
+  prod_date DateTime @db.Date
+  made      Int
+  sold      Int
+  idprod    BigInt
+  product   product  @relation(fields: [idprod], references: [idProd], onDelete: NoAction, onUpdate: NoAction)
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model product {
+  idProd       BigInt       @id @default(autoincrement())
+  product_name String
+  price        Decimal      @db.Decimal
+  daily_prod   daily_prod[]
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model user {
+  id_user  BigInt @id @default(autoincrement())
+  name     String
+  email    String @unique @db.VarChar
+  password String @db.VarChar
+}
