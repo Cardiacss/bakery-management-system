@@ -91,7 +91,7 @@ function App() {
         <nav className="nav">
           <button className={page === 'dashboard' ? 'active' : ''} onClick={() => setPage('dashboard')}>Dashboard</button>
           <button className={page === 'products' ? 'active' : ''} onClick={() => setPage('products')}>Products</button>
-          <button className={page === 'production' ? 'active' : ''} onClick={() => setPage('production')}>Daily Production</button>
+          <button className={page === 'production' ? 'active' : ''} onClick={() => setPage('production')}>Production</button>
         </nav>
 
         <div className="logout">
