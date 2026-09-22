@@ -1,7 +1,7 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { PrismaService } from '../prisma/prisma.service';
+import { PrismaService } from '../prisma/prisma.service.js';
 import { Prisma } from '@prisma/client';
-import { parseUsableDate } from '../common/date.util';
+import { parseUsableDate } from '../common/date.util.js';
 
 @Injectable()
 export class DailyProdService {

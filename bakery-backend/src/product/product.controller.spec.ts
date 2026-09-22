@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { ProductController } from './product.controller';
-import { ProductService } from './product.service';
-import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { ProductController } from './product.controller.js';
+import { ProductService } from './product.service.js';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard.js';
 
 describe('ProductController', () => {
   let controller: ProductController;

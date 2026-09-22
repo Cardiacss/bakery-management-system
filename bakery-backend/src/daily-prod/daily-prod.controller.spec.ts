@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { DailyProdController } from './daily-prod.controller';
-import { DailyProdService } from './daily-prod.service';
-import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { DailyProdController } from './daily-prod.controller.js';
+import { DailyProdService } from './daily-prod.service.js';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard.js';
 
 describe('DailyProdController', () => {
   let controller: DailyProdController;

@@ -1,7 +1,6 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
+import { AppModule } from './app.module.js';
 import { ValidationPipe } from '@nestjs/common';
-import { PrismaExceptionFilter } from './common/filters/prisma-exception.filter';
 
 (BigInt.prototype as any).toJSON = function () {
   return this.toString();

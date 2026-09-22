@@ -9,11 +9,11 @@ import {
   UseGuards,
 } from '@nestjs/common';
 
-import { ProductService } from './product.service';
-import { CreateProductDto } from './create-product.dto';
-import { UpdateProductDto } from './update-product.dto';
-import { JwtAuthGuard } from '../auth/jwt-auth.guard';
-import { ParseBigIntPipe } from '../common/pipes/parse-bigint.pipe';
+import { ProductService } from './product.service.js';
+import { CreateProductDto } from './create-product.dto.js';
+import { UpdateProductDto } from './update-product.dto.js';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard.js';
+import { ParseBigIntPipe } from '../common/pipes/parse-bigint.pipe.js';
 
 @UseGuards(JwtAuthGuard)
 @Controller('products')

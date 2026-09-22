@@ -9,12 +9,12 @@ import {
   UseGuards,
 } from '@nestjs/common';
 
-import { DailyProdService } from './daily-prod.service';
-import { CreateDailyProdDto } from './create-daily-prod.dto';
-import { UpdateDailyProdDto } from './update-daily-prod.dto';
-import { JwtAuthGuard } from '../auth/jwt-auth.guard';
-import { ParseBigIntPipe } from '../common/pipes/parse-bigint.pipe';
-import { ParseDatePipe } from '../common/pipes/parse-date.pipe';
+import { DailyProdService } from './daily-prod.service.js';
+import { CreateDailyProdDto } from './create-daily-prod.dto.js';
+import { UpdateDailyProdDto } from './update-daily-prod.dto.js';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard.js';
+import { ParseBigIntPipe } from '../common/pipes/parse-bigint.pipe.js';
+import { ParseDatePipe } from '../common/pipes/parse-date.pipe.js';
 
 @UseGuards(JwtAuthGuard)
 @Controller('daily-prod')
